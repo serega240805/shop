@@ -76,7 +76,6 @@ body {
   font-family: "Inter", sans-serif;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  color: #ffffff;
 }
 
 .wrapper {
@@ -171,6 +170,7 @@ span {
 
 .main {
   margin-top: 125px;
+  margin-bottom: 125px;
 }
 .main__content {
   display: -webkit-box;
@@ -234,10 +234,102 @@ span {
   padding: 9px 20px;
 }
 .main__link:hover {
-  color: #F7F5F5;
+  color: #f7f5f5;
   background: #000000;
   border: 2px solid #000000;
 }
 .main__img {
   border-radius: 25px;
+}
+
+.services {
+  background: #525252;
+}
+.services__text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 80px;
+  padding-top: 80px;
+}
+.services__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 175%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #f7f5f5;
+  max-width: 450px;
+}
+.services__text {
+  font-family: "Inter";
+  letter-spacing: -0.05em;
+  line-height: 175%;
+  font-weight: 600;
+  color: #f7f5f5;
+  max-width: 470px;
+}
+.services__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.services__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  max-height: 370px;
+}
+.services__box-left {
+  margin: 0px 60px;
+}
+.services__box-right {
+  margin: 0px 100px;
+}
+.services__box-title {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 175%;
+  letter-spacing: -0.05em;
+  margin-bottom: 25px;
+  color: #000000;
+}
+.services__box-text {
+  font-family: "Inter";
+  line-height: 175%;
+  letter-spacing: -0.05em;
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+.services__box-link {
+  font-family: "Inter", sans-serif;
+  line-height: 175%;
+  letter-spacing: -0.05em;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 8px 30px;
+  color: #000000;
 }

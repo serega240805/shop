@@ -8,7 +8,6 @@ body {
     font-family: "Inter", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    color: #ffffff;
 }
 .wrapper {
     min-height: 100%;
@@ -99,6 +98,7 @@ span {
 }
 .main {
     margin-top: 125px;
+    margin-bottom: 125px;
     &__content {
         display: flex;
         align-items: center;
@@ -158,7 +158,7 @@ span {
         border-radius: 10px;
         padding: 9px 20px;
         &:hover {
-            color: #F7F5F5;
+            color: #f7f5f5;
             background: #000000;
             border: 2px solid #000000;
         }
@@ -169,5 +169,89 @@ span {
 
     &__img {
         border-radius: 25px;
+    }
+}
+.services {
+    background: #525252;
+    &__text-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        padding-top: 80px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: #f7f5f5;
+        max-width: 450px;
+    }
+
+    &__text {
+        font-family: "Inter";
+        letter-spacing: -0.05em;
+        line-height: 175%;
+        font-weight: 600;
+        color: #f7f5f5;
+        max-width: 470px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffffff;
+        border-radius: 20px;
+        margin-bottom: 60px;
+        max-height: 370px;
+    }
+
+    &__box-left {
+        margin: 0px 60px;
+    }
+
+    &__box-right {
+        margin: 0px 100px;
+    }
+
+    &__box-title {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        margin-bottom: 25px;
+        color: #000000;
+    }
+
+    &__box-text {
+        font-family: "Inter";
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        max-width: 520px;
+        margin-bottom: 30px;
+    }
+
+    &__box-link {
+        font-family: "Inter", sans-serif;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        border: 2px solid #000000;
+        border-radius: 8px;
+        padding: 8px 30px;
+        color: #000000;
+    }
+
+    &__box-img {
     }
 }
