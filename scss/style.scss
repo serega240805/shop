@@ -84,7 +84,7 @@ span {
         color: #2e3235;
         letter-spacing: -0.05em;
         font-weight: 400;
-        &:hover{
+        &:hover {
             font-weight: 600;
         }
     }
@@ -98,31 +98,76 @@ span {
     }
 }
 .main {
-
+    margin-top: 125px;
     &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__left {
     }
 
     &__title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 15px;
     }
 
     &__text {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        color: #817979;
+        margin-bottom: 90px;
     }
 
     &__btn-box {
+        display: flex;
+        align-items: center;
     }
 
     &__btn {
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        font-weight: 600;
+        color: #ffffff;
+        background: #f03957;
+        border: 2px solid #f03957;
+        border-radius: 10px;
+        padding: 15px 22px;
+        margin-right: 22px;
+        &:hover {
+            color: #f03957;
+            background: #ffffff;
+            border: 2px solid #f03957;
+        }
     }
 
     &__link {
+        letter-spacing: -0.05em;
+        font-weight: 600;
+        line-height: 175%;
+        color: #000000;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        padding: 9px 20px;
+        &:hover {
+            color: #F7F5F5;
+            background: #000000;
+            border: 2px solid #000000;
+        }
     }
 
     &__right {
     }
 
     &__img {
+        border-radius: 25px;
     }
 }
