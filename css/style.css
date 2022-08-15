@@ -842,6 +842,7 @@ span {
   background: #000000;
   background-size: 100% 100%;
   font-family: "Inter";
+  padding: 110px 0;
 }
 .footer__content {
   display: -webkit-box;
@@ -850,7 +851,6 @@ span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 110px 0;
 }
 .footer__link {
   font-weight: 400;
