@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="/image/sheader/ico.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/header/ico.svg" type="image/x-icon">
     <title>Krepair</title>
 </head>
 
@@ -15,15 +15,15 @@
         <header class="header">
             <div class="container">
                 <div class="header__content">
-                    <a href="/Krepair.html" class="header__logo"><img src="./images//header/logo_krepair 1.jpg" alt="logo"
+                    <a href="/Krepair.html" class="header__logo"><img src="./images//header/logo_krepair-1.jpg" alt="logo"
                             class="header__img"></a>
                     <ul class="header__list">
-                        <li class="header__item"><a href="" class="header__link">Услуги</a></li>
-                        <li class="header__item"><a href="" class="header__link">Прайс-лист</a></li>
-                        <li class="header__item"><a href="" class="header__link">О компании</a></li>
-                        <li class="header__item"><a href="" class="header__link">Контакты</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Услуги</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Прайс-лист</a></li>
+                        <li class="header__item"><a href="#" class="header__link">О компании</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
                     </ul>
-                    <a class="header__number" href="+7 499 226 29 28">+7 499 226 29 28</a>
+                    <a class="header__number" href="+7-499-226-29-28">+7 499 226 29 28</a>
                 </div>
             </div>
         </header>
@@ -34,12 +34,12 @@
                         <h1 class="main__title">Сервисный центр</h1>
                         <p class="main__text">по ремонту техники в Москве</p>
                         <div class="main__btn-box">
-                            <button class="main__btn">Получить консультацию</button>
+                            <a href="#popup" class="main__btn">Получить консультацию</a>
                             <a href="" class="main__link">Смотреть прайс-лист</a>
                         </div>
                     </div>
                     <div class="main__right">
-                        <img src="./images/main/the-technician-repairing-the-computer-computer-hardware-repairing-upgrade-and-technology 1.jpg"
+                        <img src="./images/main/technology.jpg"
                             alt="#" class="main__img">
                     </div>
                 </div>
@@ -228,9 +228,9 @@
                 <div class="form__content">
                     <div class="form__box">
                         <div class="form__left">
-                            <input class="form__input" type="name" name="user_name" placeholder="Ваше имя">
-                            <input class="form__input" type="email" name="user_email" placeholder="E-mail">
-                            <input class="form__input" type="number" name="user_number" placeholder="Телефон*">
+                            <input class="form__input" type="text" name="имя" placeholder="Ваше имя">
+                            <input class="form__input" type="email" name="email" placeholder="E-mail">
+                            <input class="form__input" type="tel" name="number" placeholder="Телефон*">
                         </div>
                         <div class="form__right">
                             <textarea class="form__textarea" name="textarea" cols="55" rows="11"  placeholder="Опишите проблему и добавьте видео неисправности"></textarea>
@@ -248,10 +248,10 @@
         <section class="map">
             <div class="container">
             <div class="map__box">
-                <img src="./images/footer/logo_krepair.png" alt="logo" class="map__logo">
+                <h6><img src="./images/footer/logo_krepair.png" alt="logo" class="map__logo"></h6>
                 <p class="map__geo">Москва, ул  Шарикоподшипниковская д.4 к.4а</p>
                 <p class="map__email">info@krepair.ru</p>
-                <a href="+7 499 226 29 28" class="map__number">+7 499 226 29 28</a>
+                <a href="+7-499-226-29-28" class="map__number">+7 499 226 29 28</a>
             </div>
             </div>
         </section>
@@ -279,6 +279,16 @@
                 </div>
             </div>
         </footer>
+        <div id="popup" class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="" class="popup__close">X</a>
+                    <p class="popup__title">Оставьте заявку</p>
+                    <p class="popup__text">Мы свяжемся с вами в ближайшее время</p>
+                    
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
