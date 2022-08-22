@@ -65,9 +65,15 @@ span {
     }
 
     &__logo {
+        @include breakpoint(md) {
+            max-width: 112px;
+        }
     }
 
     &__img {
+        @include breakpoint(md) {
+            max-width: 112px;
+        }
     }
 
     &__list {
@@ -81,6 +87,11 @@ span {
         &:not(:last-child) {
             margin-right: 76px;
         }
+        @include breakpoint(md) {
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
     }
 
     &__link {
@@ -91,6 +102,9 @@ span {
         &:hover {
             font-weight: 600;
         }
+        @include breakpoint(md) {
+            font-size: 14px;
+        }
     }
 
     &__number {
@@ -99,6 +113,9 @@ span {
         line-height: 175%;
         letter-spacing: -0.05em;
         color: #2e3235;
+        @include breakpoint(md) {
+            font-size: 18px;
+        }
     }
 }
 .main {
@@ -108,6 +125,10 @@ span {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include breakpoint(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__left {
@@ -135,6 +156,9 @@ span {
     &__btn-box {
         display: flex;
         align-items: center;
+        @include breakpoint(md) {
+            margin-bottom: 70px;
+        }
     }
 
     &__btn {
@@ -170,20 +194,33 @@ span {
     }
 
     &__right {
+        @include breakpoint(md) {
+            width: 100%;
+            max-height: 310px;
+        }
     }
 
     &__img {
         border-radius: 25px;
+        @include breakpoint(md) {
+            width: 100%;
+            max-height: 310px;
+            object-fit: cover;
+        }
     }
 }
 .services {
     background: #525252;
+    padding-bottom: 100px;
     &__text-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 80px;
         padding-top: 80px;
+        @include breakpoint(md) {
+            margin-bottom: 60px;
+        }
     }
 
     &__title {
@@ -194,6 +231,11 @@ span {
         text-transform: uppercase;
         color: #f7f5f5;
         max-width: 450px;
+        @include breakpoint(md) {
+            font-size: 35px;
+            line-height: 150%;
+            max-width: 280px;
+        }
     }
 
     &__text {
@@ -203,6 +245,10 @@ span {
         font-weight: 600;
         color: #f7f5f5;
         max-width: 470px;
+        @include breakpoint(md) {
+            font-size: 16px;
+            max-width: 345px;
+        }
     }
 
     &__content {
@@ -219,14 +265,25 @@ span {
         border-radius: 20px;
         margin-bottom: 60px;
         max-height: 370px;
+        @include breakpoint(md) {
+            border-radius: 15px;
+            margin-bottom: 20px;
+            padding: 30px 20px;
+        }
     }
 
     &__box-left {
-        margin: 0px 60px;
+        @include breakpoint(md) {
+            margin: 0px 0px;
+            max-width: 322px;
+        }
     }
 
     &__box-right {
         margin: 0px 100px;
+        @include breakpoint(md) {
+            margin: 0px 0px;
+        }
     }
 
     &__box-title {
@@ -245,6 +302,9 @@ span {
         letter-spacing: -0.05em;
         max-width: 520px;
         margin-bottom: 30px;
+        @include breakpoint(md) {
+            font-size: 16px;
+        }
     }
 
     &__box-link {
@@ -258,6 +318,11 @@ span {
     }
 
     &__box-img {
+        @include breakpoint(md) {
+            max-width: 230px;
+            max-height: 230px;
+            border-radius: 15px;
+        }
     }
 }
 .advantages {
@@ -642,8 +707,9 @@ span {
     top: 0;
     left: 0;
     opacity: 0;
+    z-index: 999;
     visibility: hidden;
-    &:target{
+    &:target {
         opacity: 1;
         visibility: visible;
     }
@@ -652,15 +718,32 @@ span {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 50px 40px;
     }
 
     &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         position: relative;
         color: #000;
         background: #f7f5f5;
         border: 1px solid #e1e1e1;
         max-width: 550px;
+        border-radius: 10px;
+        padding: 0px 50px;
+        label {
+            cursor: pointer;
+            position: absolute;
+            right: 75px;
+            bottom: 190px;
+            border: none;
+            width: 33px;
+            height: 33px;
+            cursor: pointer;
+            border-radius: 3px;
+            background: #d9d9d9 url(../images/icons/clip.svg);
+        }
     }
 
     &__close {
@@ -686,5 +769,67 @@ span {
         text-align: center;
         letter-spacing: -0.05em;
         color: #000000;
+    }
+    &__input {
+        letter-spacing: -0.05em;
+        color: #817979;
+        line-height: 175%;
+        border: 2px solid #d9d9d9;
+        border-radius: 10px;
+        padding: 15px 130px 15px 25px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__textarea {
+        padding: 15px;
+        border: 2px solid #d9d9d9;
+        border-radius: 10px;
+        max-width: 100%;
+        height: 100%;
+        resize: none;
+        margin-bottom: 40px;
+    }
+
+    &__file {
+        position: absolute;
+        right: 75px;
+        bottom: 190px;
+        border: none;
+        width: 33px;
+        height: 33px;
+        cursor: pointer;
+        background: #d9d9d9;
+        border-radius: 3px;
+        opacity: 0;
+    }
+
+    &__btn-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__btn {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        background: #f03957;
+        border-radius: 10px;
+        color: #ffffff;
+        margin-bottom: 15px;
+        padding: 18px 45px;
+    }
+
+    &__sub-btn {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        max-width: 210px;
+        margin-left: 50px;
     }
 }
