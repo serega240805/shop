@@ -315,6 +315,7 @@ span {
   font-weight: 500;
 }
 .header__link:hover {
+  content: "fnrkfriferhiefheri";
   font-weight: 600;
 }
 @media (max-width: 768px) {
@@ -888,6 +889,7 @@ span {
           justify-content: center;
 }
 .form__btn {
+  cursor: pointer;
   font-weight: 600;
   font-size: 18px;
   line-height: 175%;

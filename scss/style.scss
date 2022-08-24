@@ -103,6 +103,7 @@ span {
         letter-spacing: -0.05em;
         font-weight: 500;
         &:hover {
+            content: "fnrkfriferhiefheri";
             font-weight: 600;
         }
         @include breakpoint(md) {
@@ -613,6 +614,7 @@ span {
     }
 
     &__btn {
+        cursor: pointer;
         font-weight: 600;
         font-size: 18px;
         line-height: 175%;

@@ -9,6 +9,7 @@ body {
     font-family: "Inter", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
+    line-height: 175%;
 }
 .wrapper {
     min-height: 100%;
@@ -27,16 +28,11 @@ body {
     background: #666;
     border-radius: 20px;
 }
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none !important;
-}
 span {
     color: rgba(240, 57, 87, 1);
 }
-.active-link{
-    color: #F03957;
+.active-link {
+    color: #f03957;
 }
 
 /*------------------------------------*/ /*------------------------------------*/
@@ -90,9 +86,9 @@ span {
         &:not(:last-child) {
             margin-right: 76px;
         }
-        &:nth-child(1){
-            .header__link{
-                color: #F03957;
+        &:nth-child(1) {
+            .header__link {
+                color: #f03957;
                 font-weight: 600;
             }
         }
@@ -114,8 +110,7 @@ span {
         @include breakpoint(md) {
             font-size: 14px;
         }
-        &:nth-child(1){
-            
+        &:nth-child(1) {
         }
     }
 
@@ -127,6 +122,180 @@ span {
         color: #2e3235;
         @include breakpoint(md) {
             font-size: 18px;
+        }
+    }
+}
+.service {
+    background: #525252;
+    margin-top: 85px;
+    padding-bottom: 125px;
+    &__link-box {
+        position: relative;
+        margin-bottom: 100px;
+        padding-top: 20px;
+        &::after {
+            content: "/";
+            position: absolute;
+            left: 78px;
+            bottom: 4px;
+            color: #fff;
+        }
+    }
+
+    &__link {
+        position: relative;
+        margin-right: 27px;
+        color: #f7f5f5;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+    }
+
+    &__text-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: #f7f5f5;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 175%;
+    }
+
+    &__text {
+        max-width: 512px;
+        font-weight: 600;
+        letter-spacing: -0.05em;
+        color: #f7f5f5;
+    }
+
+    &__box-1 {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 60px 65px;
+        max-height: 355px;
+        margin-bottom: 60px;
+        position: relative;
+        img {
+            max-width: 176px;
+            max-height: 176px;
+            position: absolute;
+            right: 40px;
+            bottom: 15px;
+        }
+    }
+    &__box-2 {
+        background: #ffffff url(/images/Услуги/foto.jpg) 770px 30px no-repeat;
+        border-radius: 20px;
+        padding: 60px 65px;
+        max-height: 555px;
+        margin-bottom: 60px;
+        position: relative;
+        img {
+            max-width: 234.35px;
+            max-height: 88.1px;
+            opacity: 0;
+        }
+    }
+    &__box-3 {
+        background: #ffffff url(/images/Услуги/tel.jpg) 780px 360px no-repeat;
+        border-radius: 20px;
+        padding: 60px 65px;
+        max-height: 745px;
+        margin-bottom: 60px;
+        position: relative;
+        img {
+            max-width: 252px;
+            max-height: 330.13px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+    &__box-4 {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 60px 65px;
+        max-height: 445px;
+        margin-bottom: 60px;
+        position: relative;
+        img {
+            max-width: 280px;
+            max-height: 206px;
+            position: absolute;
+            right: 50px;
+            bottom: 30px;
+        }
+    }
+    &__box-5 {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 60px 65px;
+        max-height: 280px;
+        margin-bottom: 60px;
+        position: relative;
+        img {
+            max-width: 243px;
+            max-height: 243px;
+            position: absolute;
+            right: 100px;
+            bottom: -30px;
+        }
+    }
+
+    &__box-title {
+        font-weight: 600;
+        font-size: 40px;
+        letter-spacing: -0.05em;
+        color: #000000;
+        margin-bottom: 45px;
+    }
+
+    &__box-body {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__box-link {
+        font-weight: 600;
+        font-size: 20px;
+        color: #000000;
+        margin-bottom: 30px;
+        max-width: 450px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 31px;
+            height: 15px;
+            left: -45px;
+            top: 8px;
+            background: url(/images/Услуги/Arrow.svg);
+        }
+    }
+
+    &__box-img {
+        margin-bottom: 35px;
+        &:nth-child(1) {
+        }
+        &:nth-child(2) {
+        }
+        &:nth-child(3) {
+        }
+        &:nth-child(4) {
+        }
+        &:nth-child(5) {
         }
     }
 }
