@@ -9,5 +9,14 @@ $(document).ready(function () {
         speed: 1000,
         autoplay: true,
         touchThreshold: 30,
+        responsive:[
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2
+                }
+            }
+        ]
     });
 })
