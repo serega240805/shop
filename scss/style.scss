@@ -739,15 +739,15 @@ span {
         border-radius: 10px;
         padding: 0px 50px;
         label {
-            cursor: pointer;
             position: absolute;
-            right: 75px;
+            right: 65px;
             bottom: 190px;
             border: none;
             width: 33px;
             height: 33px;
             cursor: pointer;
             border-radius: 3px;
+            z-index: 1;
             background: #d9d9d9 url(../images/icons/clip.svg);
         }
     }
@@ -800,12 +800,13 @@ span {
 
     &__file {
         position: absolute;
-        right: 75px;
+        right: 65px;
         bottom: 190px;
         border: none;
         width: 33px;
         height: 33px;
         cursor: pointer;
+        z-index: 2;
         background: #d9d9d9;
         border-radius: 3px;
         opacity: 0;
