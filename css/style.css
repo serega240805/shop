@@ -629,13 +629,23 @@ span {
   max-width: 850px;
   margin-bottom: 80px;
 }
+.companies__slider {
+  position: relative;
+}
 .companies__img {
   padding: 24px;
   border: 2px solid #efefef;
   border-radius: 20px;
 }
+.companies .swiper-button-prev {
+  left: -10px;
+  color: rgb(111, 115, 117);
+}
+.companies .swiper-button-next {
+  right: -10px;
+  color: rgb(111, 115, 117);
+}
 .companies .swiper-horizontal > .swiper-pagination-bullets, .companies .swiper-pagination-bullets.swiper-pagination-horizontal, .companies .swiper-pagination-custom, .companies .swiper-pagination-fraction {
-  bottom: -3750px;
   left: 0px;
   width: 100%;
 }

@@ -473,6 +473,7 @@ span {
     }
 
     &__slider {
+        position: relative;
     }
 
     &__slide {
@@ -483,11 +484,15 @@ span {
         border: 2px solid #efefef;
         border-radius: 20px;
     }
-    .swiper-wrapper{
-        
+    .swiper-button-prev{
+        left: -10px;
+        color: rgba(111, 115, 117, 1);
+    }
+    .swiper-button-next{
+        right: -10px;
+        color: rgba(111, 115, 117, 1);
     }
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        bottom: -3750px;
         left: 0px;
         width: 100%;
     }

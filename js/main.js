@@ -6,4 +6,8 @@ new Swiper('.companies__slider', {
     slidesPerView: 4,
     spaceBetween: 25,
     slidesPerGroup: 3,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
 });

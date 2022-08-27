@@ -1,6 +1,5 @@
 @import "_nullstyle";
 @import "_varables";
-@import "_slick";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;700&display=swap");
 
@@ -392,9 +391,7 @@ span {
     }
 
     &__slider {
-    }
-
-    &__slide {
+        position: relative;
     }
 
     &__img {
@@ -402,8 +399,13 @@ span {
         border: 2px solid #efefef;
         border-radius: 20px;
     }
-    .swiper-wrapper{
-        
+    .swiper-button-prev{
+        left: -10px;
+        color: rgba(111, 115, 117, 1);
+    }
+    .swiper-button-next{
+        right: -10px;
+        color: rgba(111, 115, 117, 1);
     }
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
         left: 0px;
