@@ -392,22 +392,28 @@ span {
 
     &__slider {
         position: relative;
+        padding-bottom: 40px;
     }
 
     &__img {
+        width: 260px;
+        height: 107px;
         padding: 24px;
         border: 2px solid #efefef;
         border-radius: 20px;
     }
     .swiper-button-prev{
+        top: 35%;
         left: -10px;
         color: rgba(111, 115, 117, 1);
     }
     .swiper-button-next{
+        top: 34%;
         right: -10px;
         color: rgba(111, 115, 117, 1);
     }
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 0px;
         left: 0px;
         width: 100%;
     }
@@ -444,12 +450,14 @@ span {
         border-radius: 15px;
         padding: 22px;
         max-width: 370px;
+        position: relative;
     }
 
     &__box-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-right: 20px;
     }
 
     &__name {
@@ -467,6 +475,9 @@ span {
     }
 
     &__img {
+        position: absolute;
+        right: 5px;
+        top: 12px;
     }
 
     &__text {

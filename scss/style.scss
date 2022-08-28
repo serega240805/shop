@@ -474,25 +474,31 @@ span {
 
     &__slider {
         position: relative;
-    }
-
-    &__slide {
+        padding-bottom: 40px;
     }
 
     &__img {
+        width: 260px;
+        height: 110px;
         padding: 24px;
         border: 2px solid #efefef;
         border-radius: 20px;
     }
-    .swiper-button-prev{
-        left: -10px;
+    .swiper-button-prev {
+        top: 35%;
+        left: -12px;
         color: rgba(111, 115, 117, 1);
     }
-    .swiper-button-next{
-        right: -10px;
+    .swiper-button-next {
+        top: 34%;
+        right: -12px;
         color: rgba(111, 115, 117, 1);
     }
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 0px;
         left: 0px;
         width: 100%;
     }
@@ -501,7 +507,7 @@ span {
         height: 10px;
         background: #3b3b3b;
     }
-    .swiper-pagination-bullet-active{
+    .swiper-pagination-bullet-active {
         background: #686868;
     }
 }
@@ -529,12 +535,21 @@ span {
         border-radius: 15px;
         padding: 22px;
         max-width: 370px;
+        position: relative;
+        @include breakpoint(md) {
+            padding-top: 40px;
+            max-width: 230px;
+        }
     }
 
     &__box-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-right: 20px;
+        @include breakpoint(md) {
+            margin-right: 0px;
+        }
     }
 
     &__name {
@@ -549,9 +564,19 @@ span {
         line-height: 175%;
         letter-spacing: -0.05em;
         text-decoration-line: underline;
+        @include breakpoint(md) {
+            font-size: 11px;
+        }
     }
 
     &__img {
+        position: absolute;
+        right: 5px;
+        top: 12px;
+        @include breakpoint(md) {
+            right: 10px;
+            top: 5px;
+        }
     }
 
     &__text {
@@ -564,6 +589,10 @@ span {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include breakpoint(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__link {
@@ -572,6 +601,9 @@ span {
         letter-spacing: -0.05em;
         text-decoration-line: underline;
         color: #6f7375;
+        @include breakpoint(md) {
+            margin-bottom: 15px;
+        }
     }
 
     &__stars {
@@ -620,6 +652,9 @@ span {
         flex-direction: column;
         flex: 0 0 50%;
         margin-right: 32px;
+        @include breakpoint(md) {
+            margin-right: 20px;
+        }
     }
 
     &__input {
@@ -649,6 +684,12 @@ span {
             border-radius: 3px;
             background: #d9d9d9 url(../images/icons/clip.svg);
         }
+        @include breakpoint(md) {
+            label {
+                right: 195px;
+                bottom: 25px;
+            }
+        }
     }
 
     &__textarea {
@@ -658,6 +699,9 @@ span {
         max-width: 100%;
         height: 100%;
         resize: none;
+        @include breakpoint(md) {
+            max-width: 66%;
+        }
     }
 
     &__file {
@@ -671,6 +715,10 @@ span {
         background: #d9d9d9;
         border-radius: 3px;
         opacity: 0;
+        @include breakpoint(md) {
+            right: 195px;
+            bottom: 25px;
+        }
     }
 
     &__btn-box {
@@ -703,8 +751,11 @@ span {
     }
 }
 .map {
-    background: url(../images/footer/map.jpg);
+    background: url(../images/footer/map.jpg) 0px 0px no-repeat;
     max-height: 669px;
+    @include breakpoint(md) {
+        background: url(../images/footer/map.jpg) -680px 0px no-repeat;
+        }
     &__box {
         display: inline-block;
         background: #525252;

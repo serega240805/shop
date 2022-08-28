@@ -481,21 +481,27 @@ span {
 }
 .companies__slider {
   position: relative;
+  padding-bottom: 40px;
 }
 .companies__img {
+  width: 260px;
+  height: 107px;
   padding: 24px;
   border: 2px solid #efefef;
   border-radius: 20px;
 }
 .companies .swiper-button-prev {
+  top: 35%;
   left: -10px;
   color: rgb(111, 115, 117);
 }
 .companies .swiper-button-next {
+  top: 34%;
   right: -10px;
   color: rgb(111, 115, 117);
 }
 .companies .swiper-horizontal > .swiper-pagination-bullets, .companies .swiper-pagination-bullets.swiper-pagination-horizontal, .companies .swiper-pagination-custom, .companies .swiper-pagination-fraction {
+  bottom: 0px;
   left: 0px;
   width: 100%;
 }
@@ -535,6 +541,7 @@ span {
   border-radius: 15px;
   padding: 22px;
   max-width: 370px;
+  position: relative;
 }
 .reviews__box-top {
   display: -webkit-box;
@@ -546,6 +553,7 @@ span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 20px;
 }
 .reviews__name {
   font-weight: 700;
@@ -559,6 +567,11 @@ span {
   letter-spacing: -0.05em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+.reviews__img {
+  position: absolute;
+  right: 5px;
+  top: 12px;
 }
 .reviews__text {
   line-height: 175%;
