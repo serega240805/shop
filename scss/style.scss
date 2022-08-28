@@ -804,12 +804,31 @@ span {
     &__content {
         display: flex;
         justify-content: space-between;
+        @include breakpoint(md) {
+        flex-direction: column;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint(md) {
+            margin-top: 20px;
+            }
     }
 
     &__list {
+        margin-left: 112px;
+        padding-left: 0;
+        @include breakpoint(md) {
+            margin-left: 40px;
+            }
     }
 
     &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     &__logo {

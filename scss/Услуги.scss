@@ -680,10 +680,19 @@ span {
         justify-content: space-between;
     }
 
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__list {
+        margin-left: 112px;
     }
 
     &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     &__logo {
