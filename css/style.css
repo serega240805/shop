@@ -821,6 +821,7 @@ span {
   .advantages__box {
     height: 290px;
     border-radius: 15px;
+    z-index: -5;
   }
   .advantages__box:nth-child(3) {
     height: 230px;
@@ -909,6 +910,11 @@ span {
 .companies {
   margin-bottom: 120px;
 }
+@media (max-width: 320px) {
+  .companies {
+    margin-bottom: 60px;
+  }
+}
 .companies__title {
   font-weight: 700;
   font-size: 45px;
@@ -922,12 +928,21 @@ span {
   .companies__title {
     font-size: 30px;
     line-height: 150%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 .companies__slider {
   position: relative;
   padding-bottom: 40px;
+}
+@media (max-width: 320px) {
+  .companies__slider {
+    padding-bottom: 20px;
+    z-index: -5;
+  }
+}
+.companies .swiper-slide {
+  width: 120px;
 }
 .companies__img {
   width: 260px;
@@ -936,15 +951,33 @@ span {
   border: 2px solid #efefef;
   border-radius: 20px;
 }
+@media (max-width: 320px) {
+  .companies__img {
+    width: 120px;
+    height: 66px;
+    border-radius: 5px;
+    background-size: cover;
+  }
+}
 .companies .swiper-button-prev {
-  top: 35%;
+  top: 34%;
   left: -12px;
   color: rgb(111, 115, 117);
+}
+@media (max-width: 320px) {
+  .companies .swiper-button-prev {
+    display: none;
+  }
 }
 .companies .swiper-button-next {
   top: 34%;
   right: -12px;
   color: rgb(111, 115, 117);
+}
+@media (max-width: 320px) {
+  .companies .swiper-button-next {
+    display: none;
+  }
 }
 .companies .swiper-horizontal > .swiper-pagination-bullets,
 .companies .swiper-pagination-bullets.swiper-pagination-horizontal,

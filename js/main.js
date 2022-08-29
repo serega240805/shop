@@ -15,23 +15,27 @@ new Swiper('.companies__slider', {
     mousewheel: {
         sensivity: 1,
     },
+    autoplay: {
+        delay: 5000,
+        speed: 100,
+    },
     breakpoints: {
         1160: {
             slidesPerView: 4,
-            spaceBetween: 25,
+            spaceBetween: 35,
         },
         768: {
             slidesPerView: 3,
-            spaceBetween: 105,
+            spaceBetween: 35,
         },
         320: {
-            slidesPerView: 2,
-            spaceBetween: 105,
+            spaceBetween: 15,
+            slidesPerView: 'auto',
         },
     },
 });
 var toggleButton = document.querySelector('.toggle-menu');
-    var navBar = document.querySelector('.nav-bar');
-    toggleButton.addEventListener('click', function () {
-        navBar.classList.toggle('toggle');
-    });
+var navBar = document.querySelector('.nav-bar');
+toggleButton.addEventListener('click', function () {
+    navBar.classList.toggle('toggle');
+});
