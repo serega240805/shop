@@ -1282,7 +1282,7 @@ span {
 }
 
 .map {
-  background: url(../images/footer/map.jpg) 0px 0px no-repeat;
+  background: url(../images/footer/map.jpg) center no-repeat;
   max-height: 669px;
 }
 @media (max-width: 768px) {
