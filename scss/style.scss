@@ -764,6 +764,9 @@ span {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 80px;
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
     }
 
     &__box {
@@ -772,9 +775,16 @@ span {
         padding: 22px;
         max-width: 370px;
         position: relative;
+        z-index: -5;
         @include breakpoint(md) {
             padding-top: 40px;
             max-width: 230px;
+        }
+        @include breakpoint(xs) {
+            max-width: 300px;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
         }
     }
 
@@ -786,6 +796,7 @@ span {
         @include breakpoint(md) {
             margin-right: 0px;
         }
+        
     }
 
     &__name {
@@ -851,6 +862,9 @@ span {
     &__text-box {
         display: flex;
         align-items: center;
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -860,20 +874,31 @@ span {
         letter-spacing: -0.05em;
         text-transform: uppercase;
         color: #f7f5f5;
+        @include breakpoint(xs) {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
     }
 
     &__text {
         font-weight: 600;
-        font-size: 18px;
         line-height: 175%;
         letter-spacing: -0.05em;
         color: #f7f5f5;
+        @include breakpoint(xs) {
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
     }
 
     &__content {
         background: #f7f5f5;
         border-radius: 20px;
         padding: 30px;
+        @include breakpoint(xs) {
+            padding: 30px 25px;
+            border-radius: 5px;
+        }
     }
 
     &__box {
@@ -881,6 +906,9 @@ span {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -890,6 +918,10 @@ span {
         margin-right: 32px;
         @include breakpoint(md) {
             margin-right: 20px;
+        }
+        @include breakpoint(xs) {
+            margin-right: 0px;
+            margin-bottom: 20px;
         }
     }
 
@@ -902,6 +934,9 @@ span {
         padding: 15px 0px 15px 25px;
         &:not(:last-child) {
             margin-bottom: 20px;
+        }
+        @include breakpoint(xs) {
+            padding: 15px 40px 15px 25px;
         }
     }
 
@@ -918,6 +953,7 @@ span {
             height: 33px;
             cursor: pointer;
             border-radius: 3px;
+            z-index: -5;
             background: #d9d9d9 url(../images/icons/clip.svg);
         }
         @include breakpoint(md) {
@@ -925,6 +961,9 @@ span {
                 right: 195px;
                 bottom: 25px;
             }
+        }
+        @include breakpoint(xs) {
+            z-index: 1;
         }
     }
 
@@ -937,6 +976,9 @@ span {
         resize: none;
         @include breakpoint(md) {
             max-width: 66%;
+        }
+        @include breakpoint(xs) {
+            
         }
     }
 
@@ -987,7 +1029,7 @@ span {
     }
 }
 .map {
-    background: url(../images/footer/map.jpg) center no-repeat;
+    background: url(../images/footer/map.jpg) center;
     max-height: 669px;
     @include breakpoint(md) {
         background: url(../images/footer/map.jpg) -680px 0px no-repeat;
