@@ -796,7 +796,6 @@ span {
         @include breakpoint(md) {
             margin-right: 0px;
         }
-        
     }
 
     &__name {
@@ -953,7 +952,6 @@ span {
             height: 33px;
             cursor: pointer;
             border-radius: 3px;
-            z-index: -5;
             background: #d9d9d9 url(../images/icons/clip.svg);
         }
         @include breakpoint(md) {
@@ -964,6 +962,12 @@ span {
         }
         @include breakpoint(xs) {
             z-index: 1;
+            label{
+                @include breakpoint(xs) {
+                right: 260px;
+                bottom: 15px;
+            }
+            }
         }
     }
 
@@ -978,7 +982,8 @@ span {
             max-width: 66%;
         }
         @include breakpoint(xs) {
-            
+            max-width: 34%;
+            margin-left: 245px;
         }
     }
 
@@ -996,6 +1001,10 @@ span {
         @include breakpoint(md) {
             right: 195px;
             bottom: 25px;
+        }
+        @include breakpoint(xs) {
+            right: 260px;
+            bottom: 15px;
         }
     }
 
@@ -1026,6 +1035,10 @@ span {
         letter-spacing: -0.05em;
         max-width: 210px;
         margin-left: 50px;
+        @include breakpoint(xs) {
+            max-width: 230px;
+            margin-left: 0px;
+        }
     }
 }
 .map {

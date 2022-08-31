@@ -1267,7 +1267,6 @@ span {
   height: 33px;
   cursor: pointer;
   border-radius: 3px;
-  z-index: -5;
   background: #d9d9d9 url(../images/icons/clip.svg);
 }
 @media (max-width: 768px) {
@@ -1281,6 +1280,12 @@ span {
     z-index: 1;
   }
 }
+@media (max-width: 320px) and (max-width: 320px) {
+  .form__right label {
+    right: 260px;
+    bottom: 15px;
+  }
+}
 .form__textarea {
   padding: 15px;
   border: 2px solid #d9d9d9;
@@ -1292,6 +1297,12 @@ span {
 @media (max-width: 768px) {
   .form__textarea {
     max-width: 66%;
+  }
+}
+@media (max-width: 320px) {
+  .form__textarea {
+    max-width: 34%;
+    margin-left: 245px;
   }
 }
 .form__file {
@@ -1310,6 +1321,12 @@ span {
   .form__file {
     right: 195px;
     bottom: 25px;
+  }
+}
+@media (max-width: 320px) {
+  .form__file {
+    right: 260px;
+    bottom: 15px;
   }
 }
 .form__btn-box {
@@ -1347,9 +1364,15 @@ span {
   max-width: 210px;
   margin-left: 50px;
 }
+@media (max-width: 320px) {
+  .form__sub-btn {
+    max-width: 230px;
+    margin-left: 0px;
+  }
+}
 
 .map {
-  background: url(../images/footer/map.jpg) center no-repeat;
+  background: url(../images/footer/map.jpg) center;
   max-height: 669px;
 }
 @media (max-width: 768px) {
