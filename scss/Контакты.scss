@@ -100,7 +100,7 @@ span {
         &:not(:last-child) {
             margin-right: 76px;
         }
-        &:nth-child(3) {
+        &:nth-child(4) {
             .header__link {
                 color: #f03957;
                 font-weight: 600;
@@ -241,23 +241,18 @@ span {
         transform: scaleX(1);
     }
 }
-.main {
-    margin-top: 85px;
-    margin-bottom: 120px;
-    &__link-box {
-        position: relative;
-        margin-bottom: 100px;
-        padding-top: 20px;
-        &::after {
-            content: "/";
-            position: absolute;
-            left: 78px;
-            bottom: 4px;
-            color: #a5a4a4;
-        }
+.link {
+    position: relative;
+    margin-bottom: 80px;
+    padding-top: 120px;
+    &::after {
+        content: "/";
+        position: absolute;
+        left: 190px;
+        bottom: 4px;
+        color: #a5a4a4;
     }
-
-    &__link {
+    &__1 {
         position: relative;
         margin-right: 27px;
         color: #a5a4a4;
@@ -265,377 +260,82 @@ span {
         font-size: 16px;
         line-height: 175%;
     }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__box {
-        display: flex;
-        justify-content: space-between;
-        padding: 35px;
-        &:not(:last-child) {
-            margin-bottom: 60px;
-        }
-        &:nth-child(2) {
-            background: #f7f5f5;
-            border-radius: 20px;
-            .main__text {
-                &:nth-child(1) {
-                    max-width: 400px;
-                }
-            }
-        }
+}
+.map {
+    background: url(../images/footer/map.jpg) center;
+    max-height: 669px;
+    @include breakpoint(md) {
+        background: url(../images/footer/map.jpg) -680px 0px no-repeat;
     }
 
     &__title {
-        font-family: "Montserrat";
         font-weight: 700;
         font-size: 50px;
-        line-height: 175%;
+        line-height: 125%;
         letter-spacing: -0.05em;
         text-transform: uppercase;
-    }
-
-    &__text {
-        max-width: 500px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-    }
-}
-.staff {
-    &__title {
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        text-transform: uppercase;
-        margin-bottom: 80px;
-    }
-
-    &__content {
-        display: flex;
-        align-items: center;
-        gap: 30px;
+        color: #fff;
     }
 
     &__box {
-        background: #f7f5f5;
-        border-radius: 20px;
+        display: inline-block;
+        background: #525252;
+        border-radius: 15px;
+        padding: 50px;
+        margin: 120px 0px 191px;
     }
 
-    &__img {
-        border-radius: 20px;
-        margin-bottom: 30px;
+    &__logo {
+        max-width: 150px;
+        max-height: 50px;
+        margin-bottom: 33px;
     }
 
-    &__text {
-        padding: 30px;
-    }
-
-    &__name {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 175%;
+    &__number {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 205%;
         letter-spacing: -0.05em;
+        color: #dedcdc;
+        margin-bottom: 25px;
     }
 
-    &__profesion {
+    &__geo {
         font-weight: 400;
         font-size: 16px;
         line-height: 175%;
         letter-spacing: -0.05em;
-        margin-bottom: 15px;
+        color: #efefef;
+        margin-bottom: 25px;
     }
 
-    &__work {
+    &__email {
+        font-weight: 400;
         font-size: 16px;
         line-height: 175%;
         letter-spacing: -0.05em;
-        color: #777272;
-    }
-}
-.advantages {
-    margin-bottom: 240px;
-    @include breakpoint(md) {
-        margin-bottom: 60px;
-    }
-    &__text-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 120px;
-        margin-bottom: 80px;
-        @include breakpoint(xs) {
-            margin-top: 60px;
-            margin-bottom: 55px;
-            flex-direction: column;
-        }
-    }
-
-    &__title {
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        text-transform: uppercase;
-        max-width: 523px;
-        @include breakpoint(md) {
-            font-size: 35px;
-            max-width: 321px;
-        }
-        @include breakpoint(xs) {
-            font-size: 30px;
-            line-height: 150%;
-            margin-bottom: 25px;
-        }
-    }
-
-    &__text {
-        font-family: "Inter";
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        font-weight: 600;
-        max-width: 523px;
-        @include breakpoint(md) {
-            max-width: 360px;
-            max-height: 112px;
-        }
-        @include breakpoint(xs) {
-            font-size: 16px;
-        }
-    }
-
-    &__content {
-        font-family: "Inter";
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        @include breakpoint(md) {
-            flex-direction: column;
-            width: 100%;
-        }
-    }
-
-    &__box {
-        background: #c4c4c4;
-        border-radius: 20px;
-        padding: 20px;
-        max-width: 370px;
-        height: 500px;
-        position: relative;
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
-        &:nth-child(2) {
-            background: #525252;
-            color: #ffffff;
-        }
-        &:nth-child(3) {
-            background: #d5636b;
-            color: #ffffff;
-            .advantages__name {
-                max-width: 175px;
-            }
-        }
-        @include breakpoint(md) {
-            height: 250px;
-            width: 100%;
-            max-width: none;
-            &:not(:last-child) {
-                margin-bottom: 30px;
-                margin-right: 0px;
-            }
-            &:nth-child(3) {
-                background: #d5636b;
-                color: #ffffff;
-                .advantages__name {
-                    max-width: none;
-                }
-            }
-        }
-        @include breakpoint(xs) {
-            height: 290px;
-            border-radius: 15px;
-            z-index: -5;
-            &:nth-child(3) {
-                height: 230px;
-                .advantages__img {
-                    margin-left: 30px;
-                }
-            }
-        }
-    }
-
-    &__box-body {
-        @include breakpoint(md) {
-            display: flex;
-            align-items: center;
-        }
-        @include breakpoint(xs) {
-            flex-direction: row-reverse;
-        }
-    }
-
-    &__img {
-        margin-bottom: 30px;
-        top: 0;
-        @include breakpoint(md) {
-            margin-bottom: 0px;
-            margin-right: 35px;
-        }
-        @include breakpoint(xs) {
-            margin-right: 0;
-        }
-    }
-
-    &__name {
+        color: #efefef;
         margin-bottom: 25px;
-        letter-spacing: -0.05em;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 150%;
-        text-align: left;
-        @include breakpoint(md) {
-            margin-top: 25px;
-        }
-        @include breakpoint(xs) {
-            margin-bottom: 20px;
-            margin-top: 20px;
-            font-size: 20px;
-        }
     }
 
-    &__subtitle {
-        margin-bottom: 110px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        text-align: left;
-        max-width: 300px;
-        @include breakpoint(md) {
-            margin-bottom: 42px;
-            max-width: 470px;
-            margin-left: 95px;
-            font-size: 18px;
-        }
-        @include breakpoint(xs) {
-            margin-left: 0px;
-            margin-bottom: 0px;
-            max-width: 250px;
-            font-size: 16px;
-        }
-    }
-}
-.service {
-    margin-top: 120px;
-    margin-bottom: 90px;
-    &__title {
+    &__link {
         font-weight: 700;
-        font-size: 45px;
         line-height: 175%;
         letter-spacing: -0.05em;
-        text-transform: uppercase;
-        margin-bottom: 80px;
-    }
-
-    &__body {
-        display: flex;
-        align-items: center;
-        border-radius: 20px;
-        max-height: 330px;
-        background: #f7f5f5;
-        margin-bottom: 30px;
-        &:nth-child(1) {
-            max-height: 260px;
+        color: #efefef;
+        &:hover{
+            text-decoration: underline;
         }
-    }
-
-    &__left {
-        background: #c4c4c4;
-        border-radius: 20px;
-        height: 100%;
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            width: 31px;
-            height: 16px;
-            background: url(/images/О-компании/Arrow.svg);
-        }
-    }
-
-    &__right {
-        border-radius: 20px;
-    }
-
-    &__text-1 {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        margin: 50px 175px 140px 30px;
-        max-width: 410px;
-    }
-
-    &__text {
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        margin: 45px;
-        max-width: 485px;
-    }
-}
-.client {
-    margin-bottom: 120px;
-    &__title {
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        text-transform: uppercase;
-        margin-bottom: 80px;
-    }
-
-    &__body {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-    }
-
-    &__box {
-        background: #f7f5f5;
-        border-radius: 20px;
-        max-width: 565px;
-        max-height: 290px;
-    }
-
-    &__text {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        max-width: 430px;
-        margin-top: 50px;
-        margin-left: 30px;
-        margin-bottom: 30px;
-    }
-
-    &__subtext {
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        color: #000000;
-        margin-left: 30px;
-        margin-bottom: 80px;
     }
 }
 .form {
     background: #525252;
     padding-bottom: 80px;
+    padding-top: 80px;
     &__text-box {
         display: flex;
         align-items: center;
+        margin-bottom: 30px;
         @include breakpoint(xs) {
             flex-direction: column;
         }
@@ -813,52 +513,6 @@ span {
             max-width: 230px;
             margin-left: 0px;
         }
-    }
-}
-.map {
-    background: url(../images/footer/map.jpg) center;
-    max-height: 669px;
-    @include breakpoint(md) {
-        background: url(../images/footer/map.jpg) -680px 0px no-repeat;
-    }
-    &__box {
-        display: inline-block;
-        background: #525252;
-        border-radius: 15px;
-        padding: 50px;
-        margin: 120px 0px 225px 0px;
-    }
-
-    &__logo {
-        max-width: 150px;
-        max-height: 50px;
-        margin-bottom: 33px;
-    }
-
-    &__geo {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        color: #efefef;
-        margin-bottom: 25px;
-    }
-
-    &__email {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        color: #efefef;
-        margin-bottom: 25px;
-    }
-
-    &__number {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        color: #dedcdc;
     }
 }
 .footer {
