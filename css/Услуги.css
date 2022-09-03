@@ -227,7 +227,7 @@ span {
   content: "/";
   position: absolute;
   left: 78px;
-  bottom: 4px;
+  bottom: 0px;
   color: #fff;
 }
 .service__link {

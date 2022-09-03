@@ -8,7 +8,6 @@ body {
     font-family: "Inter", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    line-height: 175%;
 }
 .wrapper {
     min-height: 100%;
@@ -27,6 +26,11 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #666;
     border-radius: 20px;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none !important;
 }
 span {
     color: rgba(240, 57, 87, 1);
@@ -52,6 +56,13 @@ span {
         width: 100%;
         height: 100%;
         background: #ffffff;
+    }
+    @include breakpoint(xs) {
+        position: relative;
+        z-index: 0;
+        &::before {
+            display: none;
+        }
     }
     &__content {
         position: relative;
@@ -80,13 +91,16 @@ span {
         align-items: center;
         justify-content: space-between;
         padding-left: 0;
+        @include breakpoint(xs) {
+            display: none;
+        }
     }
 
     &__item {
         &:not(:last-child) {
             margin-right: 76px;
         }
-        &:nth-child(1) {
+        &:nth-child(3) {
             .header__link {
                 color: #f03957;
                 font-weight: 600;
@@ -110,8 +124,6 @@ span {
         @include breakpoint(md) {
             font-size: 14px;
         }
-        &:nth-child(1) {
-        }
     }
 
     &__number {
@@ -123,12 +135,115 @@ span {
         @include breakpoint(md) {
             font-size: 18px;
         }
+        @include breakpoint(xs) {
+            display: none;
+        }
+    }
+
+    .nav-bar {
+        position: fixed;
+        background-color: #020a18;
+        top: 0;
+        right: 106%;
+        height: 100vh;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: position 2.9s;
+        z-index: 55;
+        @include breakpoint(minlg) {
+            display: none;
+        }
+    }
+
+    .toggle {
+        left: 0;
+        box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .toggle-menu {
+        background-color: rgba(0, 0, 0, 0);
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2px 2px 2px 3px;
+        border-radius: 5px;
+        cursor: pointer;
+        @include breakpoint(minlg) {
+            display: none;
+        }
+    }
+
+    .line {
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        transition: transform 0.2s ease-out;
+    }
+
+    .toggle .line1 {
+        background-color: #000000;
+        transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
+    }
+
+    .toggle .line2 {
+        display: none;
+    }
+
+    .toggle .line3 {
+        background-color: #000000;
+        transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+    }
+
+    .toggle .toggle-menu {
+        background-color: white;
+    }
+
+    .nav-list {
+        list-style: none;
+        padding-left: 0px;
+    }
+
+    .nav-list-item {
+        text-align: left;
+        padding: 20px 0;
+    }
+
+    .nav-link {
+        color: #d9d9d9;
+        font-size: 14px;
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .nav-link::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        transform: scaleX(0);
+        transition: transform 0.4s ease-in-out;
+        transform-origin: left;
+    }
+
+    .nav-link:hover::before {
+        transform: scaleX(1);
     }
 }
-.service {
-    background: #525252;
+.main {
     margin-top: 85px;
-    padding-bottom: 125px;
+    margin-bottom: 120px;
     &__link-box {
         position: relative;
         margin-bottom: 100px;
@@ -137,176 +252,126 @@ span {
             content: "/";
             position: absolute;
             left: 78px;
-            bottom: 0px;
-            color: #fff;
+            bottom: 4px;
+            color: #a5a4a4;
         }
     }
 
     &__link {
         position: relative;
         margin-right: 27px;
-        color: #f7f5f5;
+        color: #a5a4a4;
         font-weight: 400;
         font-size: 16px;
         line-height: 175%;
     }
 
-    &__text-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 80px;
-    }
-
-    &__title {
-        letter-spacing: -0.05em;
-        text-transform: uppercase;
-        color: #f7f5f5;
-        font-weight: 700;
-        font-size: 50px;
-        line-height: 175%;
-    }
-
-    &__text {
-        max-width: 512px;
-        font-weight: 600;
-        letter-spacing: -0.05em;
-        color: #f7f5f5;
-    }
-
-    &__box-1 {
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 60px 65px;
-        max-height: 355px;
-        margin-bottom: 60px;
-        position: relative;
-        img {
-            max-width: 176px;
-            max-height: 176px;
-            position: absolute;
-            right: 40px;
-            bottom: 15px;
-        }
-    }
-    &__box-2 {
-        background: #ffffff url(../images/Услуги/foto.jpg) 770px 30px no-repeat;
-        border-radius: 20px;
-        padding: 60px 65px;
-        max-height: 555px;
-        margin-bottom: 60px;
-        position: relative;
-        img {
-            max-width: 234.35px;
-            max-height: 88.1px;
-            opacity: 0;
-        }
-    }
-    &__box-3 {
-        background: #ffffff url(../images/Услуги/tel.jpg) 780px 360px no-repeat;
-        border-radius: 20px;
-        padding: 60px 65px;
-        max-height: 745px;
-        margin-bottom: 60px;
-        position: relative;
-        img {
-            max-width: 252px;
-            max-height: 330.13px;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            opacity: 0;
-        }
-    }
-    &__box-4 {
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 60px 65px;
-        max-height: 445px;
-        margin-bottom: 60px;
-        position: relative;
-        img {
-            max-width: 280px;
-            max-height: 206px;
-            position: absolute;
-            right: 50px;
-            bottom: 30px;
-        }
-    }
-    &__box-5 {
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 60px 65px;
-        max-height: 280px;
-        margin-bottom: 60px;
-        position: relative;
-        img {
-            max-width: 243px;
-            max-height: 243px;
-            position: absolute;
-            right: 100px;
-            bottom: -30px;
-        }
-    }
-
-    &__box-title {
-        font-weight: 600;
-        font-size: 40px;
-        letter-spacing: -0.05em;
-        color: #000000;
-        margin-bottom: 45px;
-    }
-
-    &__box-body {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__box-links {
+    &__content {
         display: flex;
         flex-direction: column;
     }
 
-    &__box-link {
-        font-weight: 600;
-        font-size: 20px;
-        color: #000000;
-        margin-bottom: 30px;
-        max-width: 450px;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 31px;
-            height: 15px;
-            left: -45px;
-            top: 8px;
-            background: url(/images/Услуги/Arrow.svg);
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding: 35px;
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+        &:nth-child(2) {
+            background: #f7f5f5;
+            border-radius: 20px;
+            .main__text {
+                &:nth-child(1) {
+                    max-width: 400px;
+                }
+            }
         }
     }
 
-    &__box-img {
-        margin-bottom: 35px;
-        &:nth-child(1) {
-        }
-        &:nth-child(2) {
-        }
-        &:nth-child(3) {
-        }
-        &:nth-child(4) {
-        }
-        &:nth-child(5) {
-        }
+    &__title {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        max-width: 500px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+    }
+}
+.staff {
+    &__title {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        margin-bottom: 80px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__box {
+        background: #f7f5f5;
+        border-radius: 20px;
+    }
+
+    &__img {
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        padding: 30px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+    }
+
+    &__profesion {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        margin-bottom: 15px;
+    }
+
+    &__work {
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        color: #777272;
     }
 }
 .advantages {
     margin-bottom: 240px;
+    @include breakpoint(md) {
+        margin-bottom: 60px;
+    }
     &__text-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 120px;
         margin-bottom: 80px;
+        @include breakpoint(xs) {
+            margin-top: 60px;
+            margin-bottom: 55px;
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -316,6 +381,15 @@ span {
         letter-spacing: -0.05em;
         text-transform: uppercase;
         max-width: 523px;
+        @include breakpoint(md) {
+            font-size: 35px;
+            max-width: 321px;
+        }
+        @include breakpoint(xs) {
+            font-size: 30px;
+            line-height: 150%;
+            margin-bottom: 25px;
+        }
     }
 
     &__text {
@@ -324,6 +398,13 @@ span {
         letter-spacing: -0.05em;
         font-weight: 600;
         max-width: 523px;
+        @include breakpoint(md) {
+            max-width: 360px;
+            max-height: 112px;
+        }
+        @include breakpoint(xs) {
+            font-size: 16px;
+        }
     }
 
     &__content {
@@ -331,6 +412,10 @@ span {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include breakpoint(md) {
+            flex-direction: column;
+            width: 100%;
+        }
     }
 
     &__box {
@@ -354,11 +439,55 @@ span {
                 max-width: 175px;
             }
         }
+        @include breakpoint(md) {
+            height: 250px;
+            width: 100%;
+            max-width: none;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+                margin-right: 0px;
+            }
+            &:nth-child(3) {
+                background: #d5636b;
+                color: #ffffff;
+                .advantages__name {
+                    max-width: none;
+                }
+            }
+        }
+        @include breakpoint(xs) {
+            height: 290px;
+            border-radius: 15px;
+            z-index: -5;
+            &:nth-child(3) {
+                height: 230px;
+                .advantages__img {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    &__box-body {
+        @include breakpoint(md) {
+            display: flex;
+            align-items: center;
+        }
+        @include breakpoint(xs) {
+            flex-direction: row-reverse;
+        }
     }
 
     &__img {
         margin-bottom: 30px;
         top: 0;
+        @include breakpoint(md) {
+            margin-bottom: 0px;
+            margin-right: 35px;
+        }
+        @include breakpoint(xs) {
+            margin-right: 0;
+        }
     }
 
     &__name {
@@ -368,6 +497,14 @@ span {
         font-size: 30px;
         line-height: 150%;
         text-align: left;
+        @include breakpoint(md) {
+            margin-top: 25px;
+        }
+        @include breakpoint(xs) {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
     }
 
     &__subtitle {
@@ -376,139 +513,89 @@ span {
         letter-spacing: -0.05em;
         text-align: left;
         max-width: 300px;
+        @include breakpoint(md) {
+            margin-bottom: 42px;
+            max-width: 470px;
+            margin-left: 95px;
+            font-size: 18px;
+        }
+        @include breakpoint(xs) {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            max-width: 250px;
+            font-size: 16px;
+        }
     }
 }
-.companies {
-    margin-bottom: 120px;
+.service {
+    margin-top: 120px;
     &__title {
         font-weight: 700;
         font-size: 45px;
         line-height: 175%;
         letter-spacing: -0.05em;
         text-transform: uppercase;
-        max-width: 850px;
         margin-bottom: 80px;
     }
 
-    &__slider {
-        position: relative;
-        padding-bottom: 40px;
+    &__body {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        max-height: 330px;
+        background: #f7f5f5;
+        margin-bottom: 30px;
+        &:nth-child(1){
+            max-height: 260px;
+        }
     }
 
-    &__img {
-        width: 260px;
-        height: 107px;
-        padding: 24px;
-        border: 2px solid #efefef;
+    &__left {
+        background: #c4c4c4;
+        border-radius: 20px;
+        height: 100%;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 31px;
+            height: 16px;
+            background: url(/images/О-компании/Arrow.svg);
+        }
+    }
+
+    &__right {
         border-radius: 20px;
     }
-    .swiper-button-prev{
-        top: 35%;
-        left: -10px;
-        color: rgba(111, 115, 117, 1);
-    }
-    .swiper-button-next{
-        top: 34%;
-        right: -10px;
-        color: rgba(111, 115, 117, 1);
-    }
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
-    }
-    .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        background: #3b3b3b;
-    }
-    .swiper-pagination-bullet-active{
-        background: #686868;
-    }
-}
-.reviews {
-    &__title {
-        font-weight: 700;
-        font-size: 45px;
+
+    &__text-1 {
+        font-weight: 500;
+        font-size: 20px;
         line-height: 175%;
         letter-spacing: -0.05em;
-        text-transform: uppercase;
-        max-width: 415px;
-        margin-bottom: 80px;
-    }
-
-    &__content {
-        font-family: "Inter";
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 80px;
-    }
-
-    &__box {
-        background: #f7f5f5;
-        border-radius: 15px;
-        padding: 22px;
-        max-width: 370px;
-        position: relative;
-    }
-
-    &__box-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-right: 20px;
-    }
-
-    &__name {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-    }
-
-    &__data {
-        color: #6f7375;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        text-decoration-line: underline;
-    }
-
-    &__img {
-        position: absolute;
-        right: 5px;
-        top: 12px;
+        margin: 50px 175px 140px 30px;
+        max-width: 410px;
     }
 
     &__text {
         line-height: 175%;
         letter-spacing: -0.05em;
-        margin-bottom: 16px;
-    }
-
-    &__box-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__link {
-        font-size: 14px;
-        line-height: 175%;
-        letter-spacing: -0.05em;
-        text-decoration-line: underline;
-        color: #6f7375;
-    }
-
-    &__stars {
+        margin: 45px;
+        max-width: 485px;
     }
 }
+
 .form {
     background: #525252;
     padding-bottom: 80px;
     &__text-box {
         display: flex;
         align-items: center;
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -518,20 +605,31 @@ span {
         letter-spacing: -0.05em;
         text-transform: uppercase;
         color: #f7f5f5;
+        @include breakpoint(xs) {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
     }
 
     &__text {
         font-weight: 600;
-        font-size: 18px;
         line-height: 175%;
         letter-spacing: -0.05em;
         color: #f7f5f5;
+        @include breakpoint(xs) {
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
     }
 
     &__content {
         background: #f7f5f5;
         border-radius: 20px;
         padding: 30px;
+        @include breakpoint(xs) {
+            padding: 30px 25px;
+            border-radius: 5px;
+        }
     }
 
     &__box {
@@ -539,6 +637,9 @@ span {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -546,6 +647,13 @@ span {
         flex-direction: column;
         flex: 0 0 50%;
         margin-right: 32px;
+        @include breakpoint(md) {
+            margin-right: 20px;
+        }
+        @include breakpoint(xs) {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
     }
 
     &__input {
@@ -558,11 +666,14 @@ span {
         &:not(:last-child) {
             margin-bottom: 20px;
         }
+        @include breakpoint(xs) {
+            padding: 15px 40px 15px 25px;
+        }
     }
 
     &__right {
-        flex: 0 0 50%;
         position: relative;
+        flex: 0 0 50%;
         label {
             cursor: pointer;
             position: absolute;
@@ -575,6 +686,20 @@ span {
             border-radius: 3px;
             background: #d9d9d9 url(../images/icons/clip.svg);
         }
+        @include breakpoint(md) {
+            label {
+                right: 195px;
+                bottom: 25px;
+            }
+        }
+        @include breakpoint(xs) {
+            label {
+                @include breakpoint(xs) {
+                    right: 260px;
+                    bottom: 15px;
+                }
+            }
+        }
     }
 
     &__textarea {
@@ -584,6 +709,13 @@ span {
         max-width: 100%;
         height: 100%;
         resize: none;
+        @include breakpoint(md) {
+            max-width: 66%;
+        }
+        @include breakpoint(xs) {
+            max-width: 34%;
+            margin-left: 245px;
+        }
     }
 
     &__file {
@@ -597,6 +729,14 @@ span {
         background: #d9d9d9;
         border-radius: 3px;
         opacity: 0;
+        @include breakpoint(md) {
+            right: 195px;
+            bottom: 25px;
+        }
+        @include breakpoint(xs) {
+            right: 260px;
+            bottom: 15px;
+        }
     }
 
     &__btn-box {
@@ -607,6 +747,7 @@ span {
     }
 
     &__btn {
+        cursor: pointer;
         font-weight: 600;
         font-size: 18px;
         line-height: 175%;
@@ -625,11 +766,18 @@ span {
         letter-spacing: -0.05em;
         max-width: 210px;
         margin-left: 50px;
+        @include breakpoint(xs) {
+            max-width: 230px;
+            margin-left: 0px;
+        }
     }
 }
 .map {
-    background: url(../images/footer/map.jpg);
+    background: url(../images/footer/map.jpg) center;
     max-height: 669px;
+    @include breakpoint(md) {
+        background: url(../images/footer/map.jpg) -680px 0px no-repeat;
+    }
     &__box {
         display: inline-block;
         background: #525252;
@@ -679,7 +827,7 @@ span {
         display: flex;
         justify-content: space-between;
         @include breakpoint(md) {
-        flex-direction: column;
+            flex-direction: column;
         }
     }
 
@@ -688,7 +836,7 @@ span {
         justify-content: space-between;
         @include breakpoint(md) {
             margin-top: 20px;
-            }
+        }
     }
 
     &__list {
@@ -696,7 +844,7 @@ span {
         padding-left: 0;
         @include breakpoint(md) {
             margin-left: 40px;
-            }
+        }
     }
 
     &__item {

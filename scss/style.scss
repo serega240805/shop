@@ -940,8 +940,8 @@ span {
     }
 
     &__right {
-        flex: 0 0 50%;
         position: relative;
+        flex: 0 0 50%;
         label {
             cursor: pointer;
             position: absolute;
@@ -961,7 +961,6 @@ span {
             }
         }
         @include breakpoint(xs) {
-            z-index: 1;
             label{
                 @include breakpoint(xs) {
                 right: 260px;
