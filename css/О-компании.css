@@ -729,7 +729,7 @@ span {
   right: 30px;
   width: 31px;
   height: 16px;
-  background: url(/images/О-компании/Arrow.svg);
+  background: url(../images/О-компании/Arrow.svg);
 }
 .service__right {
   border-radius: 20px;

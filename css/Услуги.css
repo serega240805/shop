@@ -377,7 +377,7 @@ span {
   height: 15px;
   left: -45px;
   top: 8px;
-  background: url(/images/Услуги/Arrow.svg);
+  background: url(../images/Услуги/Arrow.svg);
 }
 .service__box-img {
   margin-bottom: 35px;
