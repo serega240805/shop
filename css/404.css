@@ -363,6 +363,10 @@ select:focus {
   text-align: center;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: #f03957;
 }
 .error__subtitle {
@@ -372,6 +376,10 @@ select:focus {
   text-align: center;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .error__text {
   font-family: "Inter";
@@ -380,7 +388,11 @@ select:focus {
   line-height: 175%;
   letter-spacing: -0.05em;
   text-align: center;
-  padding-bottom: 90px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-bottom: 60px;
 }
 .error__link {
   font-family: "Inter";
