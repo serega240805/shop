@@ -228,6 +228,11 @@ select:focus {
 .error {
     font-family: "Montserrat";
     margin-top: 80px;
+
+    &__content{
+        padding-bottom: 40px;
+    }
+
     &__title {
         font-weight: 700;
         font-size: 80px;
@@ -257,10 +262,6 @@ select:focus {
         margin-bottom: 70px;
     }
 
-    &__btn-box{
-        margin: 0 auto;
-    }
-
     &__link {
         font-weight: 600;
         font-size: 18px;
@@ -270,7 +271,6 @@ select:focus {
         background: #f03957;
         border-radius: 10px;
         padding: 15px 30px;
-        margin: 0 auto;
     }
 }
 .footer {
