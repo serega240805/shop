@@ -225,6 +225,54 @@ select:focus {
         transform: scaleX(1);
     }
 }
+.error {
+    font-family: "Montserrat";
+    margin-top: 80px;
+    &__title {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 175%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: #f03957;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 250px;
+        line-height: 175%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    &__btn-box{
+        margin: 0 auto;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 175%;
+        letter-spacing: -0.05em;
+        color: #ffffff;
+        background: #f03957;
+        border-radius: 10px;
+        padding: 15px 30px;
+        margin: 0 auto;
+    }
+}
 .footer {
     background: #000000;
     background-size: 100% 100%;
